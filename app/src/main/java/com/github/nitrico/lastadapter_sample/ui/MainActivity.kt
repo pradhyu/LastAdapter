@@ -56,10 +56,26 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+
+    // This handles the pager in the tabs
     class ViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
-        override fun getCount() = 2
-        override fun getItem(i: Int) = if (i == 0) KotlinListFragment() else JavaListFragment()
-        override fun getPageTitle(i: Int) = if (i == 0) "Kotlin" else "Java"
+        override fun getCount() = 5
+        override fun getItem(i: Int): ListFragment {
+            return when (i) {
+                0 -> KotlinListFragment()
+                1-> JavaListFragment()
+                2-> KotlinListFragment()
+                else -> KotlinListFragment()
+            }
+        }
+        override fun getPageTitle(i: Int): String {
+          return  when (i) {
+                 0 -> "Categories"
+                 1-> "Products"
+                 2-> "Contacts"
+                else -> "Untitled"
+            }
+        }
     }
 
 }

@@ -1,5 +1,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -14,12 +16,21 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:minHeight="?attr/actionBarSize"/>
+            android:background="@android:color/holo_red_dark"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/toolbarNavigationButtonStyle"
+            app:popupTheme="@android:color/white" />
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            app:tabIndicatorColor="@android:color/holo_red_light"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@android:color/holo_red_dark"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Headline"
+            app:tabTextColor="@android:color/background_dark" />
 
     </android.support.design.widget.AppBarLayout>
 

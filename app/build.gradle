@@ -33,4 +33,5 @@ dependencies {
     //  kapt "com.android.databinding:compiler:$versions.gradlePlugin"
     //compile project(":lastadapter")
     implementation 'com.github.nitrico:LastAdapter:b19d66fb07'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 }
