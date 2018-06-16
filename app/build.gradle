@@ -4,11 +4,11 @@ plugins {
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
 }
-
 repositories {
-    maven {
-        url "https://jitpack.io"
-    }
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    google()
+    jcenter()
 }
 
 
@@ -20,10 +20,17 @@ android {
         targetSdkVersion versions.sdkTarget
     }
     dataBinding.enabled true
-    buildToolsVersion '27.0.2'
+    buildToolsVersion '27.0.3'
+    lintOptions {
+        abortOnError false
+    }
+}
+kapt {
+    generateStubs = true
 }
 
 dependencies {
+    //noinspection GradleCompatible
     implementation "com.android.support:appcompat-v7:$versions.support"
     implementation "com.android.support:cardview-v7:$versions.support"
     implementation "com.android.support:design:$versions.support"
@@ -35,7 +42,7 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
 
     // don't need kapt and no need to compile lastadapter as it has compile error
-    //  kapt "com.android.databinding:compiler:$versions.gradlePlugin"
+      kapt 'com.android.databinding:compiler:3.1.3'
     //compile project(":lastadapter")
     implementation 'com.github.nitrico:LastAdapter:b19d66fb07'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'

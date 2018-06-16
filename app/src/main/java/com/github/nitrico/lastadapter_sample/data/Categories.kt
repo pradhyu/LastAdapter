@@ -12,9 +12,6 @@ class Categories(val jsonCategory:com.aadira.library.Models.Categories) {
     val id=jsonCategory.id
     val description=jsonCategory.description
 
-    companion object Categories {
-
-    }
 }
 // this is binding view
 // in java is static method here it should be outside class directly in a file.
