@@ -19,14 +19,12 @@ android {
         minSdkVersion versions.sdkMin
         targetSdkVersion versions.sdkTarget
     }
+
     dataBinding.enabled true
     buildToolsVersion '27.0.3'
     lintOptions {
         abortOnError false
     }
-}
-kapt {
-    generateStubs = true
 }
 
 dependencies {

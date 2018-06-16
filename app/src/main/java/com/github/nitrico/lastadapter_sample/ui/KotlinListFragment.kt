@@ -21,8 +21,6 @@ import retrofit.RetrofitError
 class KotlinListFragment : ListFragment() {
 
 
-
-
     private val typeCategory = Type<ItemCategoryBinding>(R.layout.item_category)
             .onCreate { println("Created ${it.binding.item} at #${it.adapterPosition}") }
             .onBind { println("Bound ${it.binding.item} at #${it.adapterPosition}") }
