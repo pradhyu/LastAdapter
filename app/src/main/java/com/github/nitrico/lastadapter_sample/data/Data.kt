@@ -6,7 +6,7 @@ object Data {
 
     val items = ObservableArrayList<Any>().apply {
         add(Header("Header 1"))
-        for (i in 1..400) {
+        for (i in 1..4) {
             add(Person(i.toLong(), "PK" + i.toString(), "Shrestha " + (100-i).toString()))
         }
         add(Point(1, 1))

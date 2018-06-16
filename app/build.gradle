@@ -28,8 +28,12 @@ dependencies {
     implementation "com.android.support:design:$versions.support"
     implementation "com.android.support:recyclerview-v7:$versions.support"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
+    // woo commerge plugin
+    implementation 'com.github.rajatady:Woocommerce-Android-Client:0.0.3'
 
-    // don't need kapt and no need to compile lastadapter as it has bcompile error
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // don't need kapt and no need to compile lastadapter as it has compile error
     //  kapt "com.android.databinding:compiler:$versions.gradlePlugin"
     //compile project(":lastadapter")
     implementation 'com.github.nitrico:LastAdapter:b19d66fb07'
