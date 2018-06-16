@@ -19,71 +19,58 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/serialNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{"" +item.id}'
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="Star"
-                        app:layout_constraintBottom_toTopOf="parent"
-                        app:layout_constraintEnd_toStartOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:imageUrl="@{item.imageUrl}"
-                        />
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Star"
+                    app:imageUrl="@{item.imageUrl}"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/model"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text='@{"" +item.name}'
-                        android:textColor="@android:color/holo_red_dark"
-                        android:textSize="30sp"
-                        app:layout_constraintBottom_toTopOf="parent"
-                        app:layout_constraintEnd_toStartOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/serialNumber"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text='@{"" +item.id}'
-                        app:layout_constraintBottom_toTopOf="parent"
-                        app:layout_constraintEnd_toStartOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <TextView
-                        android:id="@+id/lastName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text='@{"" +item.description}'
-                        android:textColor="@android:color/holo_blue_dark"
-                        android:textSize="18sp"
-                        app:layout_constraintBottom_toTopOf="parent"
-                        app:layout_constraintEnd_toStartOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </TableRow>
+                <TextView
+                    android:id="@+id/model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{"" +item.name}'
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
+                <TextView
+                    android:id="@+id/lastName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{"" +item.description}'
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </TableRow>
 
         </TableLayout>
