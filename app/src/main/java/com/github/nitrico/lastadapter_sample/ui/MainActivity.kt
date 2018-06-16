@@ -9,11 +9,16 @@ import android.view.MenuItem
 import com.github.nitrico.lastadapter_sample.data.Data
 import com.github.nitrico.lastadapter_sample.R
 import com.github.nitrico.lastadapter_sample.data.Header
+import com.ncm.services.notification.NotificationUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+     // notification service
+     private val mNotificationTime = Calendar.getInstance().timeInMillis + 5000 //Set after 5 seconds from the current time.
+    private var mNotified = false
 
+    // notification service variable ends here
     private val random = Random()
 
     private var randomPosition: Int = 0
@@ -25,6 +30,11 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         pager.adapter = ViewPagerAdapter(supportFragmentManager)
         tabs.setupWithViewPager(pager)
+
+        // notification service check
+        if (!mNotified) {
+            NotificationUtils().setNotification(mNotificationTime, this@MainActivity)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu) = consume { menuInflater.inflate(R.menu.main, menu) }
